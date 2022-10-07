@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246c1529bec542a59116da4830dca0f1, type: 3}
+  m_Name: Terrible jam but with more ingredients
+  m_EditorClassIdentifier: 
+  Ingredients:
+  - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
+  - {fileID: 11400000, guid: e3a19769dfde525469ed3030cae90d66, type: 2}
+  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
+  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
+  - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
+  - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
+  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
+  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
+  - {fileID: 11400000, guid: e3a19769dfde525469ed3030cae90d66, type: 2}
