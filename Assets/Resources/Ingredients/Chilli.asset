@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Chilli
   Sprite: {fileID: 0}
   Weirdness: 0.936
-  Sweetness: -0.32
+  Sweetness: -0.136
   Taste: 0.428
   Popularity: 0.316
   Liquidness: 0.558
