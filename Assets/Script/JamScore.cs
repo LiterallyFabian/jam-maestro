@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 // ReSharper disable ArrangeRedundantParentheses
 
@@ -38,6 +39,8 @@ namespace Script
         public bool LiquidPenalty => Liquidness < LiquidRequirement;
         
         public float Overall { get; }
+        
+        public List<string> Feedback { get; } = new List<string>();
 
         public JamScore(Jam jam)
         {
@@ -60,6 +63,7 @@ namespace Script
             {
                 // Tastiness
                 tastiness += ingredient.Popularity * ingredient.Taste;
+                liquidness += ingredient.Liquidness;
 
                 if (Mathf.Abs(ingredient.Sweetness - highestSweetness) > 0.5f)
                 {
@@ -75,21 +79,26 @@ namespace Script
                 foreach (Ingredient goodIngredient in ingredient.GoodCombinations)
                 {
                     if (Jam.Ingredients.Contains(goodIngredient))
+                    {
                         combination += (ingredient.Taste * goodIngredient.Taste) * 3 + (1-ingredient.Popularity*5);
+                        AddFeedback($"{ingredient.Name} and {goodIngredient.Name} are a good combination! Yum!");
+                    }
                 }
                 
                 foreach (Ingredient badIngredient in ingredient.BadCombinations)
                 {
                     if (Jam.Ingredients.Contains(badIngredient))
+                    {
                         combination -= 3 * ingredient.Weirdness * ingredient.Taste;
+                        AddFeedback($"I didn't like to have {badIngredient.Name} and {ingredient.Name} in the same jar.");
+                    }
                 }
-                
-                liquidness += ingredient.Liquidness;
                 
                 // if this ingredient appears more than 3 times, it will have a penalty on the score
                 if (Jam.Ingredients.FindAll(i => i == ingredient).Count > 3)
                 {
                     combination -= 1;
+                    AddFeedback($"You used too much {ingredient.Name}!");
                 }
             }
 
@@ -105,12 +114,18 @@ namespace Script
             float score = ((Tastiness * 3) + Spiciness / 3) + (Combination * 2);
 
             // If the jam is too dry, half the score
-            if(Liquidness < LiquidRequirement)
+            if (Liquidness < LiquidRequirement)
+            {
                 score /= 2;
+                AddFeedback("This jam is too dry!");
+            }
                 
             // If the jam contains 1-2 ingredients, divide by missing ingredients
-            if(Jam.Ingredients.Count < 3)
+            if (Jam.Ingredients.Count < 3)
+            {
                 score /= 4 - Jam.Ingredients.Count;
+                AddFeedback("You should add more ingredients to your jam.");
+            }
 
             return score;
         }
@@ -123,6 +138,14 @@ namespace Script
                    $"Combination: {Mathf.Round(Combination * 100) / 100}\n" +
                    $"Liquid penalty: {LiquidPenalty}\n" +
                    $"Overall: {Mathf.Round(Overall * 100) / 100}";
+        }
+
+        private void AddFeedback(string s)
+        {
+            if (!Feedback.Contains(s))
+            {
+                Feedback.Add(s);
+            }
         }
     }
 }

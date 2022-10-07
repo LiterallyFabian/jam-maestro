@@ -17,11 +17,14 @@ namespace Script
             for (int i = 0; i < jams.Length; i++)
             {
                 Jam jam = jams[i];
+                text+="========================================\n";
                 text += $"**Jam {i + 1}: {jam.name}** \n";
                 text += jam.GetIngredients() + "\n\n";
-                text += jam.Score + "\n\n\n";
+                text += jam.Score + "\n\nFeedback:\n";
+                text += string.Join("\n", jam.Score.Feedback.ToArray());
+                text+="\n========================================\n";
             }
-            
+
             // print text to temp file
             string path = Application.temporaryCachePath + "/jam_report.txt";
             File.WriteAllText(path, text);
