@@ -5,8 +5,11 @@ namespace Script
 {
     public class IngredientTest : MonoBehaviour
     {
-
         private void Awake()
+        {
+        }
+
+        private void PrintValues()
         {
             // get all ingredients from Resources
             Ingredient[] ingredients = Resources.LoadAll<Ingredient>("Ingredients");
