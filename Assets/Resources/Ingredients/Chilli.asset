@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01315a4dae5f5244ab77aca7a532654, type: 3}
+  m_Name: Chilli
+  m_EditorClassIdentifier: 
+  Name: Chilli
+  Sprite: {fileID: 0}
+  Weirdness: 0.936
+  Sweetness: -0.32
+  Taste: 0.428
+  Popularity: 0.316
+  Liquidness: 0.558
+  Spiciness: 1
+  Color: {r: 0.6132076, g: 0.06652725, b: 0.06652725, a: 1}
+  GoodCombinations:
+  - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  BadCombinations:
+  - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
+  - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
+  - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
+  - {fileID: 11400000, guid: 8dd7b6fd887ba9b41844921acdca6e16, type: 2}
