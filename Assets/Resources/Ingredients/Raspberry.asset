@@ -19,6 +19,8 @@ MonoBehaviour:
   Taste: 0.428
   Popularity: 0.898
   Liquidness: 0.869
+  Spiciness: 0
   Color: {r: 0.7735849, g: 0.38314345, b: 0.38314345, a: 1}
-  GoodCombinations: []
+  GoodCombinations:
+  - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
   BadCombinations: []
