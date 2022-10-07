@@ -1,30 +1,43 @@
 ﻿using System;
 using UnityEngine;
+// ReSharper disable ArrangeRedundantParentheses
 
 namespace Script
 {
     public class JamScore
     {
+        #region Constants
+        private const float LiquidRequirement = 0.5f;
+        #endregion
+        
         public Jam Jam { get; }
+        
+        /// <summary>
+        /// A score representing how tasty this jam is on average.
+        /// </summary>
         public float Tastiness { get; }
+        
+        /// <summary>
+        /// A score representing how spicy this jam is on average.
+        /// </summary>
         public float Spiciness { get; }
+        
+        /// <summary>
+        /// A score indicating how well this jam is balanced.
+        /// </summary>
         public float Combination { get; }
+        
+        /// <summary>
+        /// A jam indicating how much of the jam is liquid.
+        /// </summary>
         public float Liquidness { get; }
         
-        private const float LiquidRequirement = 0.5f;
+        /// <summary>
+        /// Whether or not a liquid penalty has been applied to this score.
+        /// </summary>
+        public bool LiquidPenalty => Liquidness < LiquidRequirement;
         
-        public float Overall {
-            get
-            {
-                float score = (Tastiness * 3 + Spiciness) * Combination / 3;
-                
-                // If the jam is too dry, half the score
-                if(Liquidness < LiquidRequirement)
-                    score /= 2;
-                
-                return score;
-            }
-        }
+        public float Overall { get; }
 
         public JamScore(Jam jam)
         {
@@ -37,7 +50,7 @@ namespace Script
             
             float tastiness = 0;
             float spiciness = 0;
-            float combination = 0;
+            float combination = 1;
             float liquidness = 0;
 
             float highestSweetness = jam.Ingredients[0].Sweetness;
@@ -62,7 +75,7 @@ namespace Script
                 foreach (Ingredient goodIngredient in ingredient.GoodCombinations)
                 {
                     if (Jam.Ingredients.Contains(goodIngredient))
-                        combination += ingredient.Taste * goodIngredient.Taste + 1;
+                        combination += (ingredient.Taste * goodIngredient.Taste) * 3 + (1-ingredient.Popularity*5);
                 }
                 
                 foreach (Ingredient badIngredient in ingredient.BadCombinations)
@@ -72,12 +85,34 @@ namespace Script
                 }
                 
                 liquidness += ingredient.Liquidness;
+                
+                // if this ingredient appears more than 3 times, it will have a penalty on the score
+                if (Jam.Ingredients.FindAll(i => i == ingredient).Count > 3)
+                {
+                    combination -= 1;
+                }
             }
-            
-            Tastiness = tastiness;
+
+            Tastiness = tastiness / Jam.Ingredients.Count;
             Spiciness = spiciness / Jam.Ingredients.Count;
-            Combination = combination;
+            Combination = 1 + ((combination - 1) / Jam.Ingredients.Count);
             Liquidness = liquidness / Jam.Ingredients.Count;
+            Overall = CalculateOverall();
+        }
+        
+        private float CalculateOverall()
+        {
+            float score = ((Tastiness * 3) + Spiciness / 3) + (Combination * 2);
+
+            // If the jam is too dry, half the score
+            if(Liquidness < LiquidRequirement)
+                score /= 2;
+                
+            // If the jam contains 1-2 ingredients, divide by missing ingredients
+            if(Jam.Ingredients.Count < 3)
+                score /= 4 - Jam.Ingredients.Count;
+
+            return score;
         }
         
         public override string ToString()
@@ -86,7 +121,7 @@ namespace Script
             return $"Tastiness: {Mathf.Round(Tastiness * 100) / 100}\n" +
                    $"Spiciness: {Mathf.Round(Spiciness * 100) / 100}\n" +
                    $"Combination: {Mathf.Round(Combination * 100) / 100}\n" +
-                   $"Liquid penalty: {Liquidness < LiquidRequirement}\n" +
+                   $"Liquid penalty: {LiquidPenalty}\n" +
                    $"Overall: {Mathf.Round(Overall * 100) / 100}";
         }
     }
