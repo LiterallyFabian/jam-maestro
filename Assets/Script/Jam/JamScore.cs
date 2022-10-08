@@ -215,7 +215,28 @@ namespace JamMeistro.Jams
                 return JamReaction.Dislike;
             
             return JamReaction.Horrible;
+        }
 
+        public string ToResultText()
+        {
+            string result = $"<b>{Reaction.ToString().ToUpper()}</b>\n";
+            result += Reaction switch
+            {
+                JamReaction.Love => "Your jam is amazing!",
+                JamReaction.Like => "Your jam is good!",
+                JamReaction.Neutral => "Your jam is okay.",
+                JamReaction.Dislike => "Your jam is bad.",
+                JamReaction.Horrible => "Your jam is horrible!",
+                JamReaction.Spicy => "Your jam is too spicy!",
+                JamReaction.Sour => "Your jam is too sour!",
+                _ => throw new ArgumentOutOfRangeException(),
+            };
+            
+            result += $"\n\n<size=40>Tastiness: {Math.Round(Tastiness, 2)}\n" +
+                      $"Combination: {Math.Round(Combination, 2)}\n" +
+                      $"Overall: {Math.Round(Overall, 2)}</size>";
+            
+            return result;
         }
     }
 }

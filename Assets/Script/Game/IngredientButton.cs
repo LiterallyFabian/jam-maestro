@@ -40,8 +40,8 @@ namespace JamMeistro.Game
 
         private void Update()
         {
-            _text.enabled = _isHovering;
-            _circleOutline.enabled = _isHovering;
+            _text.enabled = _isHovering && Button.interactable;
+            _circleOutline.enabled = _isHovering && Button.interactable;
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -52,6 +52,14 @@ namespace JamMeistro.Game
         public void OnPointerExit(PointerEventData eventData)
         {
             _isHovering = false;
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (_ingredient == null)
+                return;
+            
+            name = $"IngredientButton {_ingredient.Name}";
         }
     }
 }

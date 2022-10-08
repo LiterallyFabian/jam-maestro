@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private AudioClip[] _addIngredientSounds;
     [SerializeField] private AudioClip _boilingSound;
+    [SerializeField] private ResultManager _resultManager;
+    [SerializeField] private Animator _animator;
     
     private void Awake()
     {
@@ -53,7 +55,9 @@ public class GameManager : MonoBehaviour
     private IEnumerator Cook()
     {
         AudioManager.PlayAudio(_boilingSound);
-        yield return new WaitForSeconds(5f);
-        Debug.Log(Jam.Score);
+        _animator.Play("Cook");
+        _resultManager.ShowResult(Jam);
+
+        yield return null;
     }
 }
