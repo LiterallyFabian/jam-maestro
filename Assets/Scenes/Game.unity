@@ -785,6 +785,13 @@ MonoBehaviour:
   _animator: {fileID: 89208055}
   _characterAnimator: {fileID: 1425402530}
   _drumRoll: {fileID: 8300000, guid: ea7ca9520b6003d4cafa96073192c117, type: 3}
+  _reactionHeavenly: {fileID: 8300000, guid: 29ec705f31186854ab6de5472dc9e454, type: 3}
+  _reactionGood: {fileID: 0}
+  _reactionNeutral: {fileID: 0}
+  _reactionBad: {fileID: 0}
+  _reactionHorrible: {fileID: 0}
+  _reactionSpicy: {fileID: 8300000, guid: 5dbb30917deb21943ba233b39e0ef8ac, type: 3}
+  _reactionSour: {fileID: 0}
 --- !u!4 &350269624
 Transform:
   m_ObjectHideFlags: 0
