@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d01315a4dae5f5244ab77aca7a532654, type: 3}
-  m_Name: Pumpkin
+  m_Name: Peach
   m_EditorClassIdentifier: 
-  Name: Pumpkin
+  Name: Peach
   Sprite: {fileID: 0}
   UseSound:
-  - {fileID: 8300000, guid: 434bac04a8302c44a9dc066bb847f41b, type: 3}
-  Weirdness: 0.845
-  Sweetness: 0.463
-  Taste: 0.227
-  Popularity: 0.354
-  Liquidness: 0.4
-  Spiciness: 0.033
-  Color: {r: 0.9716981, g: 0.6180451, b: 0.30709326, a: 1}
+  - {fileID: 8300000, guid: 4965da9ab70f4724e8b55c81dd3c44ad, type: 3}
+  Weirdness: 0.187
+  Sweetness: 0.534
+  Taste: 0.386
+  Popularity: 0.802
+  Liquidness: 0.43
+  Spiciness: 0.028
+  Color: {r: 0.77254903, g: 0.6271672, b: 0.38431373, a: 1}
   GoodCombinations:
-  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
+  - {fileID: 11400000, guid: a1199cacaeeb7a847b8d893b171ecaf9, type: 2}
   - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
-  BadCombinations:
-  - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
   - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
-  - {fileID: 11400000, guid: e3a19769dfde525469ed3030cae90d66, type: 2}
+  BadCombinations:
+  - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  - {fileID: 11400000, guid: bfdb7e1761ec1374ea6b0dbd2110543f, type: 2}

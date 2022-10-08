@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d01315a4dae5f5244ab77aca7a532654, type: 3}
-  m_Name: Lemon
+  m_Name: Gooseberry
   m_EditorClassIdentifier: 
-  Name: Lemon
+  Name: Gooseberry
   Sprite: {fileID: 0}
   UseSound:
-  - {fileID: 8300000, guid: 0dd9ae128e5c8d34badeafe839e26103, type: 3}
-  Weirdness: 0.672
-  Sweetness: -1
-  Taste: 0.449
-  Popularity: 0.859
-  Liquidness: 1.3
-  Spiciness: 0
-  Color: {r: 1, g: 0.99738, b: 0.6273585, a: 1}
-  GoodCombinations: []
-  BadCombinations:
+  - {fileID: 0}
+  Weirdness: 0.629
+  Sweetness: 0.57
+  Taste: 0.421
+  Popularity: 0.414
+  Liquidness: 0.83
+  Spiciness: 0.096
+  Color: {r: 0.62826926, g: 1, b: 0.48584908, a: 1}
+  GoodCombinations:
   - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
+  - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  BadCombinations:
+  - {fileID: 11400000, guid: b244b8583fec02f468d535901feb4aed, type: 2}
+  - {fileID: 11400000, guid: a1199cacaeeb7a847b8d893b171ecaf9, type: 2}

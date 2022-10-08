@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Water
   Sprite: {fileID: 0}
   UseSound:
-  - {fileID: 8300000, guid: 0dd9ae128e5c8d34badeafe839e26103, type: 3}
+  - {fileID: 8300000, guid: bbf1daff1c866e1429464827b85e28a4, type: 3}
   Weirdness: 0.1
   Sweetness: 0
   Taste: 0.1

@@ -10,20 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d01315a4dae5f5244ab77aca7a532654, type: 3}
-  m_Name: Strawberry
+  m_Name: Apple
   m_EditorClassIdentifier: 
-  Name: Strawberry
+  Name: Peach
   Sprite: {fileID: 0}
-  UseSound: []
-  Weirdness: 0.011
-  Sweetness: 0.741
-  Taste: 0.449
-  Popularity: 1
-  Liquidness: 1.99
+  UseSound:
+  - {fileID: 8300000, guid: 4965da9ab70f4724e8b55c81dd3c44ad, type: 3}
+  Weirdness: 0.074
+  Sweetness: 0.421
+  Taste: 0.185
+  Popularity: 0.922
+  Liquidness: 0.31
   Spiciness: 0
-  Color: {r: 0.7735849, g: 0.38314345, b: 0.38314345, a: 1}
+  Color: {r: 0.9811321, g: 0.89983857, b: 0.763617, a: 1}
   GoodCombinations:
-  - {fileID: 11400000, guid: 377d6f4150c4fbe45ac8fe7427c5ed8e, type: 2}
+  - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
   - {fileID: 11400000, guid: d5323534edf193f49a91f824460abdd9, type: 2}
-  BadCombinations:
   - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  - {fileID: 11400000, guid: c64231c02f1e1814785f9b7ba872ba08, type: 2}
+  BadCombinations:
+  - {fileID: 11400000, guid: 8b93c647caa452740b6cf343899aef60, type: 2}
