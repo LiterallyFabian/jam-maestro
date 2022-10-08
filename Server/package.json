@@ -9,7 +9,6 @@
     "dotenv": "^16.0.3",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
-    "mysql2": "^2.3.3",
-    "node-sass-middleware": "1.0.1"
+    "mysql2": "^2.3.3"
   }
 }
