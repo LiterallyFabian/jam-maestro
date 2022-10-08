@@ -26,7 +26,9 @@ MonoBehaviour:
   GoodCombinations:
   - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
   - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
+  - {fileID: 11400000, guid: b244b8583fec02f468d535901feb4aed, type: 2}
+  - {fileID: 11400000, guid: b032e053a481e9141a397d9bd3007197, type: 2}
   BadCombinations:
-  - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
+  - {fileID: 11400000, guid: d5323534edf193f49a91f824460abdd9, type: 2}
   - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
   - {fileID: 11400000, guid: e3a19769dfde525469ed3030cae90d66, type: 2}

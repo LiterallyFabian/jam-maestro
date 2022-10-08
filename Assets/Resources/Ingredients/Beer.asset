@@ -24,12 +24,11 @@ MonoBehaviour:
   Spiciness: 0.068
   Color: {r: 0.8962264, g: 0.7966309, b: 0.40161088, a: 1}
   GoodCombinations:
-  - {fileID: 11400000, guid: e3a19769dfde525469ed3030cae90d66, type: 2}
   - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
   - {fileID: 11400000, guid: a1199cacaeeb7a847b8d893b171ecaf9, type: 2}
   - {fileID: 11400000, guid: e5d5c7aa4e61a53409ebfca1578a2fa8, type: 2}
+  - {fileID: 11400000, guid: b244b8583fec02f468d535901feb4aed, type: 2}
   BadCombinations:
   - {fileID: 11400000, guid: 8b93c647caa452740b6cf343899aef60, type: 2}
   - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
   - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
-  - {fileID: 11400000, guid: b244b8583fec02f468d535901feb4aed, type: 2}

@@ -25,5 +25,8 @@ MonoBehaviour:
   Color: {r: 1, g: 1, b: 1, a: 1}
   GoodCombinations:
   - {fileID: 11400000, guid: e3a19769dfde525469ed3030cae90d66, type: 2}
+  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
   BadCombinations:
   - {fileID: 11400000, guid: d5323534edf193f49a91f824460abdd9, type: 2}
+  - {fileID: 11400000, guid: 8b93c647caa452740b6cf343899aef60, type: 2}
+  - {fileID: 11400000, guid: bfdb7e1761ec1374ea6b0dbd2110543f, type: 2}

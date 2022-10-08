@@ -24,7 +24,9 @@ MonoBehaviour:
   Color: {r: 0.6132076, g: 0.09545213, b: 0.09545213, a: 1}
   GoodCombinations:
   - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  - {fileID: 11400000, guid: b032e053a481e9141a397d9bd3007197, type: 2}
   BadCombinations:
   - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
   - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
   - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
+  - {fileID: 11400000, guid: a1199cacaeeb7a847b8d893b171ecaf9, type: 2}

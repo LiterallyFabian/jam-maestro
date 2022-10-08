@@ -25,11 +25,12 @@ MonoBehaviour:
   Color: {r: 0.21698111, g: 0.07266821, b: 0.07856018, a: 1}
   GoodCombinations:
   - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
-  - {fileID: 11400000, guid: bfdb7e1761ec1374ea6b0dbd2110543f, type: 2}
   - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
   - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
   - {fileID: 11400000, guid: b244b8583fec02f468d535901feb4aed, type: 2}
+  - {fileID: 11400000, guid: 377d6f4150c4fbe45ac8fe7427c5ed8e, type: 2}
   BadCombinations:
   - {fileID: 11400000, guid: 8b93c647caa452740b6cf343899aef60, type: 2}
   - {fileID: 11400000, guid: a66d77a16d48dcd4d8d97d94d9fb06b6, type: 2}
   - {fileID: 11400000, guid: 8dd7b6fd887ba9b41844921acdca6e16, type: 2}
+  - {fileID: 11400000, guid: bfdb7e1761ec1374ea6b0dbd2110543f, type: 2}

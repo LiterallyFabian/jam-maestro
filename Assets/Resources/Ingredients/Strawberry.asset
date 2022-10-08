@@ -25,5 +25,8 @@ MonoBehaviour:
   GoodCombinations:
   - {fileID: 11400000, guid: 377d6f4150c4fbe45ac8fe7427c5ed8e, type: 2}
   - {fileID: 11400000, guid: d5323534edf193f49a91f824460abdd9, type: 2}
+  - {fileID: 11400000, guid: b032e053a481e9141a397d9bd3007197, type: 2}
   BadCombinations:
   - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  - {fileID: 11400000, guid: e3a19769dfde525469ed3030cae90d66, type: 2}
+  - {fileID: 11400000, guid: bfdb7e1761ec1374ea6b0dbd2110543f, type: 2}
