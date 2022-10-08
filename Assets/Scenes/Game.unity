@@ -521,7 +521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &94060519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -950,7 +950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 26}
   m_SizeDelta: {x: 572.37, y: 358.313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505912598
@@ -983,6 +983,8 @@ MonoBehaviour:
     0
 
     Overall: -9
+
+    Global position: #1
 
     </size>'
   m_isRightToLeft: 0
@@ -2030,7 +2032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 249.509
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2066,7 +2068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 404.2635
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3580,7 +3582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 249.509
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3616,7 +3618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 134.7545
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7758900115914295944, guid: 37f0b00dfdb2b8f4d97b2770ee893d0e, type: 3}
       propertyPath: m_AnchoredPosition.y

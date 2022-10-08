@@ -9,10 +9,10 @@ namespace JamMeistro.Game
     {
         [SerializeField] private TextMeshProUGUI _scoreText;
 
-        public void ShowResult(Jam j)
+        public void ShowResult(Jam j, string pos)
         {
             gameObject.SetActive(true);
-            _scoreText.text = j.Score.ToResultText();
+            _scoreText.text = j.Score.ToResultText(pos);
         }
         
         public void ClearResult()

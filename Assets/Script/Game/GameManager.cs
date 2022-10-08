@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
+using System.Text;
 using JamMeistro.Game;
 using JamMeistro.Jams;
+using Script;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class GameManager : MonoBehaviour
 {
@@ -61,13 +64,29 @@ public class GameManager : MonoBehaviour
     public void CookJam()
     {
         Debug.Log("Cooking the jam...");
+        AudioManager.PlayAudio(_boilingSound);
+
         IsCooking?.Invoke();
         StartCoroutine(Cook());
     }
 
     private IEnumerator Cook()
     {
-        AudioManager.PlayAudio(_boilingSound);
+        string username = PlayerPrefs.GetString("Name", "");
+        string position = "";
+        if (username.Length > 0)
+        {
+            UnityWebRequest request =
+                new UnityWebRequest("http://localhost:3000/post", "POST");
+            JamNetwork jn = new JamNetwork(username, Jam);
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jn.ToJson());
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            yield return request.SendWebRequest();
+            position = $"Global position: {request.downloadHandler.text}";
+        }
+
         _animator.Play("Cook");
         _resultManager.ClearResult();
         yield return new WaitForSeconds(4f);
@@ -108,6 +127,6 @@ public class GameManager : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
         
-        _resultManager.ShowResult(Jam);
+        _resultManager.ShowResult(Jam, position);
     }
 }
