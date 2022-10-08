@@ -233,7 +233,7 @@ namespace JamMeistro.Jams
                 _ => throw new ArgumentOutOfRangeException(),
             };
             
-            result += $"\n<size=40>Tastiness: {Math.Round(Tastiness, 2)}\n" +
+            result += $"\n<size=40>\n" +
                       $"Combination: {Math.Round(Combination, 2)}\n" +
                       $"Overall: {Math.Round(Overall, 2)}\n" +
                       $"{pos}</size>";
