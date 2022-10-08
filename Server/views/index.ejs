@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <title><%= title %></title>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div id="logo" class="container">
+    <div class="row" style="margin: 2em 0">
+        <div class="col-md-4">
+            <img src="images/logo.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table id="table">
+        <thead>
+        <tr>
+            <th>Position</th>
+            <th>Name</th>
+            <th>Combination</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<script>
+    let data = <%- JSON.stringify(jamData) %>;
+    $('#table').DataTable({
+        data: data,
+        order: [[3, "desc"]],
+        iDisplayLength: 25,
+        responsive: true,
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        columns: [
+            {data: 'position'},
+            {data: 'username'},
+            {
+                data: 'combo',
+                "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                    $(nTd).html(Math.round(sData * 100) / 100);
+                }
+            },
+            {
+                data: 'overall',
+                "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                    $(nTd).html(Math.round(sData * 100) / 100);
+                }
+            }
+        ]
+    })
+    ;
+</script>
+</body>
