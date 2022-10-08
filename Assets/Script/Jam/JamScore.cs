@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 // ReSharper disable ArrangeRedundantParentheses
 
-namespace Script
+namespace JamMeistro.Jams
 {
     [JsonObject(MemberSerialization.OptIn)]
     public class JamScore

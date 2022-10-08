@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using JamMeistro.Jams;
 using UnityEngine;
 
-namespace Script
+namespace JamMeistro.Debugging
 {
     public class GenerateJamReport : MonoBehaviour
     {

@@ -3,7 +3,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Script
+namespace JamMeistro.Jams
 {
     [JsonObject(MemberSerialization.OptIn)]
     [CreateAssetMenu(fileName = "New Jam", menuName = "Jam/Jam")]

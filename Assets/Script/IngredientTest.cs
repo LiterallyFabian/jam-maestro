@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using JamMeistro.Jams;
 using Newtonsoft.Json;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace Script
+namespace JamMeistro.Debugging
 {
     public class IngredientTest : MonoBehaviour
     {
