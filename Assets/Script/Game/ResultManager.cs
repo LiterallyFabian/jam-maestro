@@ -1,6 +1,7 @@
 ﻿using JamMeistro.Jams;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace JamMeistro.Game
 {
@@ -12,6 +13,16 @@ namespace JamMeistro.Game
         {
             gameObject.SetActive(true);
             _scoreText.text = j.Score.ToResultText();
+        }
+
+        public void NewGame()
+        {
+            SceneManager.LoadScene("Game");
+        }
+
+        public void OpenLeaderboard()
+        {
+            Application.OpenURL("https://jam.sajber.me");
         }
     }
 }

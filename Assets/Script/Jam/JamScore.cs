@@ -159,6 +159,7 @@ namespace JamMeistro.Jams
             if (Jam.Ingredients.Count < 3)
             {
                 score /= 4 - Jam.Ingredients.Count;
+                score -= 0.5f;
                 AddFeedback("You should add more ingredients to your jam.");
             }
             
@@ -175,7 +176,7 @@ namespace JamMeistro.Jams
                 score /= 2;
                 AddFeedback("This jam is too sour!");
             }
-
+            
             return score;
         }
         
@@ -206,13 +207,13 @@ namespace JamMeistro.Jams
             if (Sourness > 0.9f)
                 return JamReaction.Sour;
             if (Overall > 5)
-                return JamReaction.Love;
+                return JamReaction.Heavenly;
             if (Overall > 2)
-                return JamReaction.Like;
+                return JamReaction.Good;
             if (Overall > 0)
                 return JamReaction.Neutral;
             if (Overall > -4)
-                return JamReaction.Dislike;
+                return JamReaction.Bad;
             
             return JamReaction.Horrible;
         }
@@ -222,17 +223,17 @@ namespace JamMeistro.Jams
             string result = $"<b>{Reaction.ToString().ToUpper()}</b>\n";
             result += Reaction switch
             {
-                JamReaction.Love => "Your jam is amazing!",
-                JamReaction.Like => "Your jam is good!",
+                JamReaction.Heavenly => "Your jam is amazing!",
+                JamReaction.Good => "Your jam is good!",
                 JamReaction.Neutral => "Your jam is okay.",
-                JamReaction.Dislike => "Your jam is bad.",
+                JamReaction.Bad => "Your jam is bad.",
                 JamReaction.Horrible => "Your jam is horrible!",
                 JamReaction.Spicy => "Your jam is too spicy!",
                 JamReaction.Sour => "Your jam is too sour!",
                 _ => throw new ArgumentOutOfRangeException(),
             };
             
-            result += $"\n\n<size=40>Tastiness: {Math.Round(Tastiness, 2)}\n" +
+            result += $"\n<size=40>Tastiness: {Math.Round(Tastiness, 2)}\n" +
                       $"Combination: {Math.Round(Combination, 2)}\n" +
                       $"Overall: {Math.Round(Overall, 2)}</size>";
             
