@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Gooseberry
   Sprite: {fileID: 21300000, guid: bcfd80f7d83d9644e991c529298fba40, type: 3}
-  UseSound:
-  - {fileID: 0}
+  UseSound: []
   Weirdness: 0.629
   Sweetness: 0.57
   Taste: 0.421
