@@ -31,13 +31,13 @@ namespace JamMeistro.Debugging
             Debug.Log(output);
         }
 
-        private void GenerateIngredientJson()
+        public void GenerateIngredientJson()
         {
             string output = JsonConvert.SerializeObject(_ingredients, Formatting.Indented);
             
             string path = Application.temporaryCachePath + "/ingredients.json";
             File.WriteAllText(path, output);
-            Process.Start("notepad.exe", path);
+            Process.Start(path);
         }
     }
 }

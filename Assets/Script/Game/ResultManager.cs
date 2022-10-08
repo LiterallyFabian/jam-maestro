@@ -22,7 +22,7 @@ namespace JamMeistro.Game
 
         public void NewGame()
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Main");
         }
 
         public void OpenLeaderboard()
