@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         if (username.Length > 0)
         {
             UnityWebRequest request =
-                new UnityWebRequest("http://localhost:3000/post", "POST");
+                new UnityWebRequest("https://jam.sajber.me/hook", "POST");
             JamNetwork jn = new JamNetwork(username, Jam);
             byte[] bodyRaw = Encoding.UTF8.GetBytes(jn.ToJson());
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
