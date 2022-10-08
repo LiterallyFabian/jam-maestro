@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Lemon
   Sprite: {fileID: 0}
+  UseSound:
+  - {fileID: 8300000, guid: 0dd9ae128e5c8d34badeafe839e26103, type: 3}
   Weirdness: 0.672
   Sweetness: -1
   Taste: 0.449
   Popularity: 0.859
   Liquidness: 1
+  Spiciness: 0
   Color: {r: 1, g: 0.99738, b: 0.6273585, a: 1}
   GoodCombinations: []
   BadCombinations:

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pumpkin
   Sprite: {fileID: 0}
+  UseSound:
+  - {fileID: 8300000, guid: 434bac04a8302c44a9dc066bb847f41b, type: 3}
   Weirdness: 0.845
   Sweetness: 0.463
   Taste: 0.227

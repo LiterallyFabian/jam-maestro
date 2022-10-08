@@ -13,6 +13,9 @@ namespace JamMeistro.Jams
 
         [Tooltip("The sprite of the ingredient.")]
         public Sprite Sprite;
+        
+        [Tooltip("The potential sound effect(s) when the ingredient is used.")]
+        public AudioClip[] UseSound;
 
         [Header("Ingredient Stats")]
         [Range(0, 1)]
