@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip _boilingSound;
     [SerializeField] private ResultManager _resultManager;
     [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _characterAnimator;
     
     private void Awake()
     {
@@ -56,8 +57,37 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.PlayAudio(_boilingSound);
         _animator.Play("Cook");
-        _resultManager.ShowResult(Jam);
+        _resultManager.ClearResult();
 
-        yield return null;
+        yield return new WaitForSeconds(9f);
+
+        switch (Jam.Score.Reaction)
+        {
+            case JamReaction.Heavenly:
+                _characterAnimator.Play("CharacterHeavenly");
+                break;
+            case JamReaction.Good:
+                _characterAnimator.Play("CharacterGood");
+                break;
+            case JamReaction.Neutral:
+                _characterAnimator.Play("CharacterNeutral");
+                break;
+            case JamReaction.Bad:
+                _characterAnimator.Play("CharacterBad");
+                break;
+            case JamReaction.Spicy:
+                _characterAnimator.Play("CharacterSpicy");
+                break;
+            case JamReaction.Sour:
+                _characterAnimator.Play("CharacterSour");
+                break;
+            case JamReaction.Horrible:
+                _characterAnimator.Play("CharacterHorrible");
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        
+        _resultManager.ShowResult(Jam);
     }
 }

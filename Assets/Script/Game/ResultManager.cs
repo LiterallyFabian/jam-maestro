@@ -14,6 +14,11 @@ namespace JamMeistro.Game
             gameObject.SetActive(true);
             _scoreText.text = j.Score.ToResultText();
         }
+        
+        public void ClearResult()
+        {
+            _scoreText.text = "Tasting...";
+        }
 
         public void NewGame()
         {
