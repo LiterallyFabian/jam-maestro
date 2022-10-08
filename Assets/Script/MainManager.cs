@@ -15,6 +15,19 @@ namespace Script
         private void Awake()
         {
             _inputField.text = PlayerPrefs.GetString("Name", "");
+            
+            // config music
+            if (GameObject.FindGameObjectWithTag("Music") == null)
+            {
+                GameObject music = new GameObject();
+                DontDestroyOnLoad(music);
+                music.tag = "Music";
+                AudioSource audio = music.AddComponent<AudioSource>();
+                audio.clip = Resources.Load<AudioClip>("Music");
+                audio.loop = true;
+                audio.volume = 0.25f;
+                audio.Play();
+            }
         }
 
         private void Update()
