@@ -521,7 +521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &94060519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -646,10 +646,10 @@ RectTransform:
   m_Father: {fileID: 2112828281}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 336.89474, y: -35.874}
+  m_SizeDelta: {x: 204.5965, y: 51.748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229706400
 MonoBehaviour:
@@ -784,6 +784,7 @@ MonoBehaviour:
   _resultManager: {fileID: 94060520}
   _animator: {fileID: 89208055}
   _characterAnimator: {fileID: 1425402530}
+  _drumRoll: {fileID: 8300000, guid: ea7ca9520b6003d4cafa96073192c117, type: 3}
 --- !u!4 &350269624
 Transform:
   m_ObjectHideFlags: 0
@@ -2535,6 +2536,7 @@ GameObject:
   - component: {fileID: 1425402529}
   - component: {fileID: 1425402528}
   - component: {fileID: 1425402530}
+  - component: {fileID: 1425402531}
   m_Layer: 5
   m_Name: Character
   m_TagString: Untagged
@@ -2618,6 +2620,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &1425402531
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425402526}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1427919218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,10 +3520,10 @@ RectTransform:
   m_Father: {fileID: 2112828281}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 112.29825, y: -35.874}
+  m_SizeDelta: {x: 204.5965, y: 51.748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973915036
 MonoBehaviour:

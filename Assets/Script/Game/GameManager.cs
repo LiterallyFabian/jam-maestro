@@ -17,6 +17,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ResultManager _resultManager;
     [SerializeField] private Animator _animator;
     [SerializeField] private Animator _characterAnimator;
+
+    [Header("Result sound effects")] [SerializeField]
+    private AudioClip _drumRoll;
+
+    [SerializeField] private AudioClip _reactionHeavenly;
+    [SerializeField] private AudioClip _reactionGood;
+    [SerializeField] private AudioClip _reactionNeutral;
+    [SerializeField] private AudioClip _reactionBad;
+    [SerializeField] private AudioClip _reactionHorrible;
+    [SerializeField] private AudioClip _reactionSpicy;
+    [SerializeField] private AudioClip _reactionSour;
+    
     
     private void Awake()
     {
@@ -58,31 +70,39 @@ public class GameManager : MonoBehaviour
         AudioManager.PlayAudio(_boilingSound);
         _animator.Play("Cook");
         _resultManager.ClearResult();
-
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(4f);
+        AudioManager.PlayAudio(_drumRoll);
+        yield return new WaitForSeconds(5f);
 
         switch (Jam.Score.Reaction)
         {
             case JamReaction.Heavenly:
                 _characterAnimator.Play("CharacterHeavenly");
+                AudioManager.PlayAudio(_reactionHeavenly);
                 break;
             case JamReaction.Good:
                 _characterAnimator.Play("CharacterGood");
+                AudioManager.PlayAudio(_reactionGood);
                 break;
             case JamReaction.Neutral:
                 _characterAnimator.Play("CharacterNeutral");
+                AudioManager.PlayAudio(_reactionNeutral);
                 break;
             case JamReaction.Bad:
                 _characterAnimator.Play("CharacterBad");
+                AudioManager.PlayAudio(_reactionBad);
                 break;
             case JamReaction.Spicy:
                 _characterAnimator.Play("CharacterSpicy");
+                AudioManager.PlayAudio(_reactionSpicy);
                 break;
             case JamReaction.Sour:
                 _characterAnimator.Play("CharacterSour");
+                AudioManager.PlayAudio(_reactionSour);
                 break;
             case JamReaction.Horrible:
                 _characterAnimator.Play("CharacterHorrible");
+                AudioManager.PlayAudio(_reactionHorrible);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
