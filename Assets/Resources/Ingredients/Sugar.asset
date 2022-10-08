@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Sugar
   Sprite: {fileID: 21300000, guid: 34916119490bb7c4ca096edada6c4d12, type: 3}
-  UseSound: []
+  UseSound:
+  - {fileID: 8300000, guid: 08dac020aab7fa74283911acd330b431, type: 3}
   Weirdness: 0.03
   Sweetness: 3.7
   Taste: 0.562
