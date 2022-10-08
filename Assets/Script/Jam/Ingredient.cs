@@ -24,8 +24,8 @@ namespace JamMeistro.Jams
         [JsonProperty("weirdness")]
         public float Weirdness = 0f;
 
-        [Range(-1, 1)]
-        [Tooltip("How sweet the ingredient is. -1 is sour, 0 is neutral, 1 is very sweet.")]
+        [Range(-1, 5)]
+        [Tooltip("How sweet the ingredient is. -1 is sour, 0 is neutral, 1 is very sweet. 5 is sugar.")]
         [JsonProperty("sweetness")]
         public float Sweetness = 0f;
 
