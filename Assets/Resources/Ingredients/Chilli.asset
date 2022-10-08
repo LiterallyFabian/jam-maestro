@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chilli
   m_EditorClassIdentifier: 
   Name: Chilli
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: d268115b1a4623f4494c045bb404931f, type: 3}
   UseSound: []
   Weirdness: 0.936
   Sweetness: -0.136

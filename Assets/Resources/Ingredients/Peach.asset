@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Peach
   m_EditorClassIdentifier: 
   Name: Peach
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: adce5b5a42863274fa6a541e096da44d, type: 3}
   UseSound:
   - {fileID: 8300000, guid: 4965da9ab70f4724e8b55c81dd3c44ad, type: 3}
   Weirdness: 0.187

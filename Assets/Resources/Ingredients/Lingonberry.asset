@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Lingonberry
   m_EditorClassIdentifier: 
   Name: Lingonberry
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 2c8ca3cffbd9ab14a9298da6b5b18b42, type: 3}
+  UseSound: []
   Weirdness: 0.386
   Sweetness: -0.793
   Taste: 0.929

@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 246c1529bec542a59116da4830dca0f1, type: 3}
-  m_Name: Drottningsylt
+  m_Name: Beer
   m_EditorClassIdentifier: 
   Ingredients:
-  - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
-  - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
-  - {fileID: 11400000, guid: 8b93c647caa452740b6cf343899aef60, type: 2}
-  - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
-  - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
+  - {fileID: 11400000, guid: bfdb7e1761ec1374ea6b0dbd2110543f, type: 2}
+  - {fileID: 11400000, guid: bfdb7e1761ec1374ea6b0dbd2110543f, type: 2}
+  - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
   SugarAmount: 0

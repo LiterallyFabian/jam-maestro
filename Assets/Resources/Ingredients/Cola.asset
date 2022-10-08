@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cola
   m_EditorClassIdentifier: 
   Name: Cola
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 461c8ebfb43a8164794b49567d4afaab, type: 3}
   UseSound:
   - {fileID: 8300000, guid: d113424e08004f344b57dadb3f94ef93, type: 3}
   Weirdness: 0.661

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Carrot
   m_EditorClassIdentifier: 
   Name: Carrot
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: cc78b0caf1d939344b38b4e228e42de0, type: 3}
   UseSound:
   - {fileID: 8300000, guid: 434bac04a8302c44a9dc066bb847f41b, type: 3}
   Weirdness: 0.326

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
   Name: Pumpkin
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 2b687feb4df3616458368ca08eb17d10, type: 3}
   UseSound:
   - {fileID: 8300000, guid: 434bac04a8302c44a9dc066bb847f41b, type: 3}
   Weirdness: 0.845

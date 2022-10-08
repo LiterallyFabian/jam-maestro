@@ -43,13 +43,7 @@ namespace JamMeistro.Jams
         
         [JsonProperty("sourness")]
         public float Sourness { get; }
-        
-        /// <summary>
-        /// Whether or not a liquid penalty has been applied to this score.
-        /// </summary>
-        [JsonProperty("liquidPenalty")]
-        public bool LiquidPenalty => Liquidness < LiquidRequirement;
-        
+
         [JsonProperty("overall")]
         public float Overall { get; }
         
@@ -149,13 +143,18 @@ namespace JamMeistro.Jams
         {
             float score = (Tastiness * 3) + (Combination * 3);
             
-            // If the jam is too dry, half the score
-            if (Liquidness < LiquidRequirement)
+            // If the jam is too dry or too liquid, it will have a penalty on the score
+            if (Liquidness < 0.5f)
             {
                 score /= 2;
                 AddFeedback("This jam is too dry!");
             }
-                
+            else if (Liquidness > 1.1f)
+            {
+                score /= 2;
+                AddFeedback("This jam is too liquid!");
+            }
+
             // If the jam contains 1-2 ingredients, divide by missing ingredients
             if (Jam.Ingredients.Count < 3)
             {
@@ -187,7 +186,7 @@ namespace JamMeistro.Jams
                    $"Spiciness: {Mathf.Round(Spiciness * 100) / 100}\n" +
                    $"Sourness: {Mathf.Round(Sourness * 100) / 100}\n" +
                    $"Combination: {Mathf.Round(Combination * 100) / 100}\n" +
-                   $"Liquid penalty: {LiquidPenalty}\n" +
+                   $"Liquidness: {Mathf.Round(Liquidness * 100) / 100}\n" +
                    $"Reaction: {Reaction}\n" +
                    $"Overall: {Mathf.Round(Overall * 100) / 100}";
         }

@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Blueberry
   m_EditorClassIdentifier: 
   Name: Blueberry
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 50ae17a37317c7c4996a4c298cb8f16e, type: 3}
+  UseSound: []
   Weirdness: 0.086
   Sweetness: 0.421
   Taste: 0.347
   Popularity: 0.789
   Liquidness: 0.107
+  Spiciness: 0
   Color: {r: 0.1192587, g: 0.10933607, b: 0.8584906, a: 1}
   GoodCombinations:
   - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}

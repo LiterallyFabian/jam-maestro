@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01315a4dae5f5244ab77aca7a532654, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  Name: Peach
-  Sprite: {fileID: 0}
+  Name: Apple
+  Sprite: {fileID: 21300000, guid: 43f878de6dd4745438079001a085a809, type: 3}
   UseSound:
   - {fileID: 8300000, guid: 4965da9ab70f4724e8b55c81dd3c44ad, type: 3}
   Weirdness: 0.074

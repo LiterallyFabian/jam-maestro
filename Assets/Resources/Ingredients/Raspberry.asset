@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Raspberry
   m_EditorClassIdentifier: 
   Name: Raspberry
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: b1c431e58abd396439a4ad7e6881b052, type: 3}
+  UseSound: []
   Weirdness: 0.025
   Sweetness: 0.579
   Taste: 0.428

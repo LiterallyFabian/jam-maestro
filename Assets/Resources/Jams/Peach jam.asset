@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 246c1529bec542a59116da4830dca0f1, type: 3}
-  m_Name: Drottningsylt
+  m_Name: Peach jam
   m_EditorClassIdentifier: 
   Ingredients:
-  - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
+  - {fileID: 11400000, guid: b244b8583fec02f468d535901feb4aed, type: 2}
+  - {fileID: 11400000, guid: a1199cacaeeb7a847b8d893b171ecaf9, type: 2}
   - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
-  - {fileID: 11400000, guid: 8b93c647caa452740b6cf343899aef60, type: 2}
-  - {fileID: 11400000, guid: 43405f51d14d0b847a553c375c06e696, type: 2}
   - {fileID: 11400000, guid: 9cf4098b1cb20ed46bea4e5d86e267b8, type: 2}
   SugarAmount: 0
