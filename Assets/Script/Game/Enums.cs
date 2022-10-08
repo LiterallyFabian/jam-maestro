@@ -2,10 +2,10 @@
 {
     public enum JamReaction
     {
-        Love,
-        Like,
+        Heavenly,
+        Good,
         Neutral,
-        Dislike,
+        Bad,
         Spicy,
         Sour,
         Horrible,
