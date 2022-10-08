@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 // ReSharper disable ArrangeRedundantParentheses
 
 namespace Script
 {
+    [JsonObject(MemberSerialization.OptIn)]
     public class JamScore
     {
         #region Constants
@@ -16,30 +18,37 @@ namespace Script
         /// <summary>
         /// A score representing how tasty this jam is on average.
         /// </summary>
+        [JsonProperty("taste")]
         public float Tastiness { get; }
         
         /// <summary>
         /// A score representing how spicy this jam is on average.
         /// </summary>
+        [JsonProperty("spiciness")]
         public float Spiciness { get; }
         
         /// <summary>
         /// A score indicating how well this jam is balanced.
         /// </summary>
+        [JsonProperty("combination")]
         public float Combination { get; }
         
         /// <summary>
         /// A jam indicating how much of the jam is liquid.
         /// </summary>
+        [JsonProperty("liquidness")]
         public float Liquidness { get; }
         
         /// <summary>
         /// Whether or not a liquid penalty has been applied to this score.
         /// </summary>
+        [JsonProperty("liquidPenalty")]
         public bool LiquidPenalty => Liquidness < LiquidRequirement;
         
+        [JsonProperty("overall")]
         public float Overall { get; }
         
+        [JsonProperty("feedback")]
         public List<string> Feedback { get; } = new List<string>();
 
         public JamScore(Jam jam)
