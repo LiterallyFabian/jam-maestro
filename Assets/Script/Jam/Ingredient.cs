@@ -37,9 +37,9 @@ namespace JamMeistro.Jams
         [JsonProperty("popularity")]
         public float Popularity = 0f;
 
-        [Range(0, 1)]
+        [Range(0, 5)]
         [Tooltip(
-            "The amount of liquid in this ingredent. 0 requires a lot of water, 1 has no demand for extra liquid.")]
+            "The amount of liquid in this ingredent. 0 requires a lot of water, 1 has no demand for extra liquid. >1 is a liquid.")]
         [JsonProperty("liquidness")]
         public float Liquidness = 0f;
 

@@ -9,19 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01315a4dae5f5244ab77aca7a532654, type: 3}
-  m_Name: Strawberry
+  m_Script: {fileID: 11500000, guid: 246c1529bec542a59116da4830dca0f1, type: 3}
+  m_Name: What
   m_EditorClassIdentifier: 
-  Name: Strawberry
-  Sprite: {fileID: 0}
-  UseSound: []
-  Weirdness: 0.011
-  Sweetness: 0.741
-  Taste: 0.449
-  Popularity: 1
-  Liquidness: 1.99
-  Spiciness: 0
-  Color: {r: 0.7735849, g: 0.38314345, b: 0.38314345, a: 1}
-  GoodCombinations: []
-  BadCombinations:
+  Ingredients:
+  - {fileID: 11400000, guid: 5a7736894e5df9347887359c69ef4fc7, type: 2}
   - {fileID: 11400000, guid: 76b50368749b4f24ea233679975d3683, type: 2}
+  - {fileID: 11400000, guid: a1199cacaeeb7a847b8d893b171ecaf9, type: 2}
+  SugarAmount: 0
