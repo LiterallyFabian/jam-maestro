@@ -33,6 +33,7 @@
             <th>Name</th>
             <th>Combination</th>
             <th>Score</th>
+            <th>Reaction</th>
         </tr>
         </thead>
     </table>
@@ -62,6 +63,8 @@
                 "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
                     $(nTd).html(Math.round(sData * 100) / 100);
                 }
+            }, {
+                data: 'reaction'
             }
         ]
     })

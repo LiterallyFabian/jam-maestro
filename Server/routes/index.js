@@ -23,6 +23,7 @@ router.post('/hook', function (req, res, next) {
         jam_json: JSON.stringify(req.body.jam),
         taste: req.body.jam.score.taste,
         combo: req.body.jam.score.combination,
+        reaction: ['Heavenly', 'Good', 'Neutral', 'Bad', 'Spicy', 'Sour', 'Horrible'][req.body.jam.score.reaction],
         overall: req.body.jam.score.overall
     };
 
@@ -33,7 +34,7 @@ router.post('/hook', function (req, res, next) {
         }
 
         // All rows in the table have an overall score. Return the table position of the new score.
-        connection.query('SELECT COUNT(*) AS position FROM scores WHERE overall > ?', [data.overall], function (e, result) {
+        connection.query('SELECT COUNT(*) AS position FROM scores WHERE overall >= ?', [data.overall], function (e, result) {
             if (e) {
                 console.error(e);
                 return res.sendStatus(500);
