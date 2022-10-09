@@ -59,11 +59,6 @@ namespace JamMeistro.Jams
         {
             Jam = jam;
             
-            // Each jam consists out of one or more ingredients. These ingredients have different values to compare them with.
-            // The values are: weirdness, sweetness, taste, popularity, liquidness, spiciness, good combination and bad combination
-            // good and bad combination is an array of other ingredients. If the ingredient is in the good combination array, it will add to the score.
-            // If it is in the bad combination array, it will have a huge penalty on the score.
-            
             float tastiness = 0;
             float spiciness = 0;
             float combination = 1;
