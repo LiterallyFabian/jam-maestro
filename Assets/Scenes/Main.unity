@@ -545,7 +545,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 50
+  m_Spacing: 30
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -1707,8 +1707,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: tO APPEAR IN THE GLOBAL LEADERBOARDS, ENTER YOUR NAME BELOW AND COMPETE
-    WITH OTHERS TO MAKE THE BEST JAM POSSIBLE!
+  m_Text: 'To compete with others in the leaderboards, enter your name below! The
+    highest scoring jam will win a prize once the game jam ends! '
 --- !u!222 &1290275624
 CanvasRenderer:
   m_ObjectHideFlags: 0

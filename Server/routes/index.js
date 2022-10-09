@@ -16,6 +16,10 @@ router.get('/', function (req, res, next) {
     });
 });
 
+router.get('/faq', function (req, res, next) {
+    res.render('faq', { title: 'FAQ' });
+});
+
 router.post('/hook', function (req, res, next) {
 
     let data = {
