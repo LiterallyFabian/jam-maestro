@@ -14,7 +14,7 @@ namespace JamMeistro.Game
 
         private void Start()
         {
-            if (PlayerPrefs.GetString("User", "").Length == 0)
+            if (PlayerPrefs.GetString("Name", "").Length == 0)
             {
                 _leaderboardButton.GetComponentInChildren<Text>().text = "Join leaderboard";
                 _leaderboardButton.onClick = new Button.ButtonClickedEvent();
