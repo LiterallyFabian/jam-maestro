@@ -11,6 +11,7 @@ namespace Script
         [SerializeField] private IngredientTest _ingredientTest;
         [SerializeField] private Button _buttonOptOut;
         [SerializeField] private InputField _inputField;
+        [SerializeField] private GameObject _helpPanel;
 
         private void Awake()
         {
@@ -33,6 +34,16 @@ namespace Script
         private void Update()
         {
             _buttonOptOut.interactable = _inputField.text.Length > 0;
+        }
+
+        public void OpenHelp()
+        {
+            _helpPanel.SetActive(true);
+        }
+
+        public void CloseHelp()
+        {
+            _helpPanel.SetActive(false);
         }
 
         public void Play()

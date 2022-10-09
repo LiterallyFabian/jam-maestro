@@ -217,16 +217,6 @@ namespace JamMeistro.Jams
 
         public string ToResultText(string pos)
         {
-            /*
-             * <size=55><b>TERRIBLE</b></size>
-What the hell did you put in this? It's terrible!<size=40>
-
-Tastiness: 4
-Combination: 0
-Overall: -9
-Global position: #1
-</size>
-             */
             string result = $"<size=55><b>{Reaction.ToString().ToUpper()}</b></size>\n";
             result += Reaction switch
             {
