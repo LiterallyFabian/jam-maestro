@@ -201,9 +201,9 @@ namespace JamMeistro.Jams
                 return JamReaction.Spicy;
             if (Sourness > 0.9f)
                 return JamReaction.Sour;
-            if (Overall > 5)
+            if (Overall > 7.5f)
                 return JamReaction.Heavenly;
-            if (Overall > 2)
+            if (Overall > 3f)
                 return JamReaction.Good;
             if (Overall > 0)
                 return JamReaction.Neutral;
