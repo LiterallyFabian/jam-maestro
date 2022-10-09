@@ -1001,13 +1001,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome maestro, I hope you are ready to cook!\n\nThe objective is simple:
-    make the best jam you can and impress the judge, Raz Berry. If you wish, you
-    can also try to impress the audience by entering your name in the main menu.
-    \n\nSo, how do you make jam? It's easy, just put whatever you can find in the
-    pot! Be careful though, some ingredients don't go well together. Weirder ingredients
-    are very risky and can ruin your jam, but they can also impress Mr. Berry if
-    you use them right."
+  m_text: "Welcome maestro, I hope you are ready to cook!\r\n\r\nThe objective is
+    simple: make the best jam you can and impress Raz Berry, our judge who will taste
+    your jam. If you wish, you can also compete against other jam maestros and win
+    a prize by entering your name in the main menu.\r\n\r\nSo, how do you make jam?
+    It's easy, just put whatever you can find in the pot! Be careful though, some
+    ingredients don't go well together. Weirder ingredients are very risky and can
+    ruin your jam, but they can also impress Mrs. Berry if you use them right.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9c3a02a2b4f1aa47ae1c05f5bc0e23f, type: 2}
   m_sharedMaterial: {fileID: -7174981112274104142, guid: e9c3a02a2b4f1aa47ae1c05f5bc0e23f, type: 2}
