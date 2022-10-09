@@ -6,6 +6,7 @@ using JamMeistro.Jams;
 using Script;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -140,5 +141,10 @@ public class GameManager : MonoBehaviour
         }
         
         _resultManager.ShowResult(Jam, position);
+    }
+    
+    public void GoToMain()
+    {
+        SceneManager.LoadScene("Main");
     }
 }
