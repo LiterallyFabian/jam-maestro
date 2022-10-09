@@ -2345,10 +2345,10 @@ RectTransform:
   m_Father: {fileID: 89208054}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2560, y: 1440}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &977955680
 CanvasGroup:
@@ -2375,14 +2375,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.08627451, g: 0.023529412, b: 0.07450981, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9698526c5f2c944284d8a83c8994aa0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2741,6 +2741,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89208054}
     m_Modifications:
+    - target: {fileID: 7106596734462806200, guid: 6ead0eeaee218294e961e53deba34372, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 350269623}
+    - target: {fileID: 7106596734462806200, guid: 6ead0eeaee218294e961e53deba34372, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMain
+      objectReference: {fileID: 0}
     - target: {fileID: 7106596734462806201, guid: 6ead0eeaee218294e961e53deba34372, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3200,7 +3208,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.13207549, g: 0.013082949, b: 0.1130367, a: 1}
+  m_BackGroundColor: {r: 0.08627451, g: 0.023529412, b: 0.07450981, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
