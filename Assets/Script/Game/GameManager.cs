@@ -6,6 +6,7 @@ using JamMeistro.Jams;
 using Script;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ResultManager _resultManager;
     [SerializeField] private Animator _animator;
     [SerializeField] private Animator _characterAnimator;
+    [SerializeField] private GameObject _progressPrefab;
+    [SerializeField] private Transform _progressParent;
 
     [Header("Result sound effects")] [SerializeField]
     private AudioClip _drumRoll;
@@ -59,6 +62,9 @@ public class GameManager : MonoBehaviour
             AudioManager.PlayAudio(_addIngredientSounds);
         else
             AudioManager.PlayAudio(ingredient.UseSound);
+        
+        GameObject icon = Instantiate(_progressPrefab, _progressParent);
+        icon.GetComponent<Image>().sprite = ingredient.Sprite;
         
         // TODO: play animation
         
