@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     public void CookJam()
     {
         Debug.Log("Cooking the jam...");
-        AudioManager.PlayAudio(_boilingSound);
+        AudioManager.PlayAudio(_boilingSound).volume = 0.4f;
 
         IsCooking?.Invoke();
         StartCoroutine(Cook());
