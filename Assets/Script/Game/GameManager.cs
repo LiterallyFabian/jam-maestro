@@ -9,6 +9,9 @@ using UnityEngine.Networking;
 
 public class GameManager : MonoBehaviour
 {
+    private const string ServerEndpoint = "https://jam.sajber.me/hook";
+    //private const string ServerEndpoint = "http://localhost:3000/hook";
+    
     public static GameManager Instance { get; private set; }
     
     public static event Action IsCooking;
@@ -76,14 +79,17 @@ public class GameManager : MonoBehaviour
         string position = "";
         if (username.Length > 0)
         {
+            Debug.Log($"POST {ServerEndpoint} HTTP/1.1");
             UnityWebRequest request =
-                new UnityWebRequest("https://jam.sajber.me/hook", "POST");
+                new UnityWebRequest(ServerEndpoint, "POST");
             JamNetwork jn = new JamNetwork(username, Jam);
+            Debug.Log($"JSON: {jn.ToJson()}");
             byte[] bodyRaw = Encoding.UTF8.GetBytes(jn.ToJson());
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
             yield return request.SendWebRequest();
+            Debug.Log(request.responseCode);
             position = $"Global position: {request.downloadHandler.text}";
         }
 
