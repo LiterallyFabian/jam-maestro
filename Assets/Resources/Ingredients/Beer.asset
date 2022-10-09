@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Beer
   Sprite: {fileID: 21300000, guid: 2c088486433e69e469cb772776918272, type: 3}
   UseSound:
-  - {fileID: 8300000, guid: d113424e08004f344b57dadb3f94ef93, type: 3}
+  - {fileID: 8300000, guid: 7206f1408de7a4f42b06cd94654fae00, type: 3}
   Weirdness: 0.658
   Sweetness: -0.367
   Taste: 0.584
