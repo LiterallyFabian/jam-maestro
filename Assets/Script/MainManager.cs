@@ -66,6 +66,11 @@ namespace Script
         {
             Application.OpenURL("https://jam.sajber.me");
         }
+
+        public void OpenFAQ()
+        {
+            Application.OpenURL("https://jam.sajber.me/faq");
+        }
         
         public void Quit()
         {
