@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using JamMeistro.Game;
 using Newtonsoft.Json;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 // ReSharper disable ArrangeRedundantParentheses
 
 namespace JamMeistro.Jams
@@ -215,20 +217,30 @@ namespace JamMeistro.Jams
 
         public string ToResultText(string pos)
         {
-            string result = $"<b>{Reaction.ToString().ToUpper()}</b>\n";
+            /*
+             * <size=55><b>TERRIBLE</b></size>
+What the hell did you put in this? It's terrible!<size=40>
+
+Tastiness: 4
+Combination: 0
+Overall: -9
+Global position: #1
+</size>
+             */
+            string result = $"<size=55><b>{Reaction.ToString().ToUpper()}</b></size>\n";
             result += Reaction switch
             {
-                JamReaction.Heavenly => "Your jam is amazing!",
-                JamReaction.Good => "Your jam is good!",
-                JamReaction.Neutral => "Your jam is okay.",
-                JamReaction.Bad => "Your jam is bad.",
-                JamReaction.Horrible => "Your jam is horrible!",
-                JamReaction.Spicy => "Your jam is too spicy!",
-                JamReaction.Sour => "Your jam is too sour!",
+                JamReaction.Heavenly => EndgameQuotes.Heavenly[Random.Range(0, EndgameQuotes.Heavenly.Length)],
+                JamReaction.Good => EndgameQuotes.Good[Random.Range(0, EndgameQuotes.Good.Length)],
+                JamReaction.Neutral => EndgameQuotes.Neutral[Random.Range(0, EndgameQuotes.Neutral.Length)],
+                JamReaction.Bad => EndgameQuotes.Bad[Random.Range(0, EndgameQuotes.Bad.Length)],
+                JamReaction.Horrible => EndgameQuotes.Horrible[Random.Range(0, EndgameQuotes.Horrible.Length)],
+                JamReaction.Spicy => EndgameQuotes.Spicy[Random.Range(0, EndgameQuotes.Spicy.Length)],
+                JamReaction.Sour => EndgameQuotes.Sour[Random.Range(0, EndgameQuotes.Sour.Length)],
                 _ => throw new ArgumentOutOfRangeException(),
             };
             
-            result += $"\n<size=40>\n" +
+            result += $"\n\n<size=40>\n" +
                       $"Combination: {Math.Round(Combination, 2)}\n" +
                       $"Overall: {Math.Round(Overall, 2)}\n" +
                       $"{pos}</size>";

@@ -31,7 +31,7 @@ namespace JamMeistro.Game
         
         public void ClearResult()
         {
-            _scoreText.text = "Tasting...";
+            _scoreText.text = "<size=55>Tasting...</size>";
             _buttons.SetActive(false);
         }
 
