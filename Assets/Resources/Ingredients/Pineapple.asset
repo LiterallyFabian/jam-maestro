@@ -15,7 +15,9 @@ MonoBehaviour:
   Name: Pineapple
   Sprite: {fileID: 21300000, guid: 37bea4853fa02b646ad64acc40ef2639, type: 3}
   UseSound:
-  - {fileID: 8300000, guid: 0dd9ae128e5c8d34badeafe839e26103, type: 3}
+  - {fileID: 8300000, guid: d019b67353c262b489a982e619be47b6, type: 3}
+  - {fileID: 8300000, guid: 93b5bc9cbf90fb143b917b7a6889ea09, type: 3}
+  - {fileID: 8300000, guid: 6c2a0972dc792b14c868f6c3472685ee, type: 3}
   Weirdness: 0.449
   Sweetness: 0.132
   Taste: 0.643

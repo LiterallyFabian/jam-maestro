@@ -739,7 +739,7 @@ MonoBehaviour:
   _reactionBad: {fileID: 0}
   _reactionHorrible: {fileID: 0}
   _reactionSpicy: {fileID: 8300000, guid: 5dbb30917deb21943ba233b39e0ef8ac, type: 3}
-  _reactionSour: {fileID: 0}
+  _reactionSour: {fileID: 8300000, guid: e0c7e517f4cbca54a84fcc6774331d23, type: 3}
 --- !u!4 &350269624
 Transform:
   m_ObjectHideFlags: 0
