@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
 
         _animator.Play("Cook");
         _resultManager.ClearResult();
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         AudioManager.PlayAudio(_drumRoll);
         yield return new WaitForSeconds(5f);
 
