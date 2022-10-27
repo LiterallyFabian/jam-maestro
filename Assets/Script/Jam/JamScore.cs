@@ -215,7 +215,7 @@ namespace JamMeistro.Jams
             return JamReaction.Horrible;
         }
 
-        public string ToResultText(string pos)
+        public string ToResultText()
         {
             string result = $"<size=55><b>{Reaction.ToString().ToUpper()}</b></size>\n";
             result += Reaction switch
@@ -232,8 +232,7 @@ namespace JamMeistro.Jams
             
             result += $"\n\n<size=40>" +
                       $"Combination: {Math.Round(Combination, 2)}\n" +
-                      $"Overall: {Math.Round(Overall, 2)}\n" +
-                      $"{pos}</size>";
+                      $"Overall: {Math.Round(Overall, 2)}</size>";
             
             return result;
         }

@@ -22,10 +22,10 @@ namespace JamMeistro.Game
             }
         }
 
-        public void ShowResult(Jam j, string pos)
+        public void ShowResult(Jam j)
         {
             gameObject.SetActive(true);
-            _scoreText.text = j.Score.ToResultText(pos);
+            _scoreText.text = j.Score.ToResultText();
             _buttons.SetActive(true);
         }
         

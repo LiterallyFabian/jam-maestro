@@ -1,19 +1,13 @@
 using System;
 using System.Collections;
-using System.Text;
 using JamMeistro.Game;
 using JamMeistro.Jams;
-using Script;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private const string ServerEndpoint = "https://jam.sajber.me/hook";
-    //private const string ServerEndpoint = "http://localhost:3000/hook";
-    
     public static GameManager Instance { get; private set; }
     
     public static event Action IsCooking;
@@ -82,24 +76,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Cook()
     {
-        string username = PlayerPrefs.GetString("Name", "");
-        string position = "";
-        if (username.Length > 0)
-        {
-            Debug.Log($"POST {ServerEndpoint} HTTP/1.1");
-            UnityWebRequest request =
-                new UnityWebRequest(ServerEndpoint, "POST");
-            JamNetwork jn = new JamNetwork(username, Jam);
-            Debug.Log($"JSON: {jn.ToJson()}");
-            byte[] bodyRaw = Encoding.UTF8.GetBytes(jn.ToJson());
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
-            yield return request.SendWebRequest();
-            Debug.Log(request.responseCode);
-            position = $"Global position: {request.downloadHandler.text}";
-        }
-
         _animator.Play("Cook");
         _resultManager.ClearResult();
         yield return new WaitForSeconds(3f);
@@ -140,7 +116,7 @@ public class GameManager : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
         
-        _resultManager.ShowResult(Jam, position);
+        _resultManager.ShowResult(Jam);
     }
     
     public void GoToMain()
