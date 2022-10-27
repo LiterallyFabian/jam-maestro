@@ -37,7 +37,7 @@ namespace JamMeistro.Debugging
             
             string path = Application.temporaryCachePath + "/ingredients.json";
             File.WriteAllText(path, output);
-            Process.Start(path);
+            Process.Start("notepad.exe", path);
         }
     }
 }
