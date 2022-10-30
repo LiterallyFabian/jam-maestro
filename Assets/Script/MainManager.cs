@@ -71,7 +71,22 @@ namespace Script
         {
             Application.OpenURL("https://jam.sajber.me/faq");
         }
+
+        public void OpenGit()
+        {
+            Application.OpenURL("https://github.com/LiterallyFabian/jam-maestro");
+        }
         
+        public void FabianTwitter()
+        {
+            Application.OpenURL("https://twitter.com/literallyfabian");
+        }
+
+        public void NoroTwitter()
+        {
+            Application.OpenURL("https://twitter.com/noroalia");
+        }
+
         public void Quit()
         {
             Application.Quit();
